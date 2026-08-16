@@ -114,7 +114,7 @@ if uploaded_file is not None:
 
         with ui_tab3:
             st.subheader(f"Extracted Test Observations Vectors ({model_option})")
-            st.dataframe(input_data.head(55), use_container_width=True)
+            st.dataframe(input_data.head(55), width='stretch')
             
     except Exception as e:
         st.error(f"Exception Occoured: {str(e)}. Ensure uploaded files match original configurations.")
