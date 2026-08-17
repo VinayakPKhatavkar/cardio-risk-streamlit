@@ -107,17 +107,19 @@ if uploaded_file is not None:
         with ui_tab2:
             st.subheader(f"Confusion Matrix Heatmap Breakdown ({model_option})")
             cm = confusion_matrix(y_true, y_preds)
-            fig, ax = plt.subplots(figsize=(4.8, 3.5))
+            fig, ax = plt.subplots(figsize=(3.8, 2.0))
             sns.heatmap(
                 cm, annot=True, fmt='d', cmap='mako',
                 xticklabels=['Healthy (0)', 'Disease Risk (1)'],
                 yticklabels=['Healthy (0)', 'Disease Risk (1)'],
-                cbar=False, ax=ax
+                cbar=False, ax=ax,
+                annot_kws={"size": 10}
             )
-            plt.ylabel('Ground Truth Records')
-            plt.xlabel('System Predicted Outcomes')
+            plt.ylabel('Ground Truth Records', fontsize=8)
+            plt.xlabel('System Predicted Outcomes', fontsize=8)
+            ax.tick_params(labelsize=8)
             plt.tight_layout()
-            st.pyplot(fig)
+            st.pyplot(fig, width="content")
 
         with ui_tab3:
             st.subheader(f"Extracted Test Observations Vectors ({model_option})")
