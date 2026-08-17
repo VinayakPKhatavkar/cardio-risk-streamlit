@@ -17,15 +17,22 @@ st.markdown("""
     .main { background-color: #f1f5f9; }
     h1 { color: #0f172a; font-family: 'Segoe UI', system-ui, sans-serif; font-weight: 800; }
     
+    [data-testid="stMetricValue"] {
+        color: #ffffff !important;
+        font-weight: 700 !important;
+    }
+    [data-testid="stMetricLabel"] {
+        color: #e2e8f0 !important;
+    }
     .stMetric { 
-        background-color: #1e293b !important; /* Dark background to make white text pop */
+        background-color: #1e293b !important; 
         padding: 20px; 
         border-radius: 12px; 
-        box-shadow: 0 1px 3px rgba(0,0,0,0.1); 
+        box-shadow: 0 4px 6px -1px rgba(0,0,0,0.1), 0 2px 4px -1px rgba(0,0,0,0.06);
+        border: 1px solid #334155 !important;
     }
     </style>
 """, unsafe_allow_html=True)
-
 
 st.title("🫀 Heart Disease Prediction Dashboard Based on Cardio Vascular Data")
 st.caption("Multi-model performance metrics running evaluations on the John Smith Kaggle repository dataset.")
