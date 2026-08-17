@@ -4,7 +4,7 @@ Cardiovascular disease tracking requires highly resilient feature evaluations to
 
 The primary objective is to implement, balance, evaluate, and deploy five distinct machine learning classification models on a clinical diagnostic matrix. This project checks model consistency, performance metrics, and resilience against unseen test data streams via an interactive web interface.
 
-We will be implementing below models:
+#### We will be implementing below models:
 1. Logistic Regression 
 2. Decision Tree Classifier 
 3. K-Nearest Neighbor Classifier 
@@ -54,3 +54,4 @@ The table below details structural observations regarding how each algorithm pro
 | **Naive Bayes** | Performs predictions quickly by treating all clinical bio-markers as entirely independent. While this "independence assumption" slightly penalizes its final accuracy (since metrics like blood pressure and age correlate), it remains incredibly resilient to noise. |
 | **Random Forest (Ensemble)** | Achieves peak optimization performance across the dataset. By combining 130 unique decision tree paths and randomizing sub-features, it reduces structural variance, handles column multi-collinearity smoothly, and yields the highest ROC AUC score. |
 | **Overall Winner** | **Random Forest (Ensemble)**. It handles the complex mix of continuous metrics (cholesterol, max heart rate) and categorical variables (sex, chest pain type) better than any single model, delivering the optimal balance between high precision and low false-negative rates. |
+| | |
